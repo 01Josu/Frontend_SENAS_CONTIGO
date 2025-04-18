@@ -1,0 +1,20 @@
+<div class="home-container">
+    <div class="hero-banner">
+      <h1>Bienvenido a Señas Contigo</h1>
+      <p>Aprende lenguaje de señas de manera sencilla e interactiva.</p>
+      <button [routerLink]="'/lecciones'" class="cta-btn">Ver Lecciones</button>
+    </div>
+  
+    <div class="intro-section">
+      <h2>¿Por qué aprender lenguaje de señas?</h2>
+      <p>El lenguaje de señas es fundamental para la inclusión y accesibilidad. Aquí te ayudamos a comenzar.</p>
+      <button [routerLink]="'/lecciones'" class="cta-btn">Comienza Ahora</button>
+    </div>
+  
+    <!-- Sección de video que se reproducirá automáticamente -->
+    <div class="video-section">
+        <h2>Explora cómo se enseña el lenguaje de señas</h2>
+        <!-- Video con autoplay al cargar la página -->
+        <iframe src="https://www.youtube.com/embed/qG1CQFiHX6c?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+</div>

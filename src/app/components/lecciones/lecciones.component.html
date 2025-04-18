@@ -1,0 +1,16 @@
+<div class="lecciones">
+    <h2>Lecciones Disponibles</h2>
+    <p>Selecciona una lección para comenzar a aprender el lenguaje de señas.</p>
+    <ul class="lecciones-list">
+      <li *ngFor="let leccion of lecciones" class="leccion-item">
+        <!-- Enlace que redirige al detalle de la lección -->
+        <a [routerLink]="['/leccion', leccion.id]" class="leccion-link">
+          <div class="leccion-card">
+            <h3>{{ leccion.titulo }}</h3>
+            <p>{{ leccion.descripcion | slice:0:100 }}...</p>
+            <span class="view-details">Ver detalles</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+</div>
