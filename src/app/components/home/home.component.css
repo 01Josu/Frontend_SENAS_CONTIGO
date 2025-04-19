@@ -103,3 +103,63 @@ h2:hover {
     color: #6D9F9B; /* Color del texto al pasar el mouse */
     transition: color 0.3s ease; /* Transición suave */
 }
+
+/* Logo ajustable */
+.hero-logo {
+    width: 25%; /* Los logos ocuparán el 25% del ancho de la pantalla */
+    height: auto; /* La altura se ajusta proporcionalmente */
+    max-width: 200px; /* Limitar el tamaño máximo del logo */
+    margin: 0 10px; /* Separación entre los logos */
+}
+
+/* Contenedor de los logos y título */
+.title-with-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio debajo del conjunto de logos y título */
+    gap: 10px; /* Espacio entre los logos */
+    flex-wrap: wrap; /* Permite que los logos se ajusten cuando no haya suficiente espacio */
+    flex-direction: row; /* Alinea los logos en una fila por defecto */
+}
+
+/* Estilo del título */
+.title-with-logos h1 {
+    font-size: 2.5rem;
+    color: #3a3a3a;
+    margin: 0 20px; /* Separación entre los logos y el título */
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .hero-logo {
+        width: 40%; /* Los logos ocuparán el 40% en pantallas medianas */
+        max-width: 150px; /* Limitar el tamaño máximo en pantallas medianas */
+        margin: 5px; /* Ajustar los márgenes entre los logos */
+    }
+
+    .title-with-logos {
+        justify-content: space-evenly; /* Asegura que los logos se distribuyan uniformemente */
+        gap: 5px; /* Menos espacio entre los logos */
+        flex-direction: row; /* Mantener los logos en una sola fila */
+        align-items: center; /* Alinear los logos verticalmente */
+    }
+
+    .title-with-logos h1 {
+        font-size: 2rem; /* Ajustar el tamaño del título en pantallas más pequeñas */
+        margin: 0; /* Eliminar margen para evitar que se desplace */
+    }
+}
+
+/* Estilos para pantallas más pequeñas (por debajo de 500px) */
+@media (max-width: 500px) {
+    .hero-logo {
+        width: 50%; /* Los logos ocuparán el 50% del ancho de la pantalla */
+        max-width: 120px; /* Limitar el tamaño máximo en pantallas muy pequeñas */
+    }
+
+    .title-with-logos {
+        flex-direction: column; /* Cambiar a una columna cuando hay poco espacio */
+        align-items: center; /* Centrar los logos y el título */
+    }
+}

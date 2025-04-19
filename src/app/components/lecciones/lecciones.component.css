@@ -151,3 +151,26 @@
   height: 40px;
   object-fit: contain;
 }
+
+/* Botón de Volver al Inicio en la esquina inferior derecha */
+.back-btn {
+  position: fixed; /* Fija el botón en una posición específica de la pantalla */
+  bottom: 20px; /* Lo coloca 20px por encima del borde inferior */
+  right: 20px; /* Lo coloca 20px a la derecha del borde */
+  background-color: #6D9F9B; /* Igual que tus otros botones */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+  text-decoration: none;
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+/* Efecto hover */
+.back-btn:hover {
+  background-color: #5c8c88; /* Un poco más oscuro en hover */
+  transform: scale(1.05);
+}

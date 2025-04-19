@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom right, #a8d8d3, #63c2aa); /* Fondo más suave con tonos frescos */
+  background: linear-gradient(to bottom right, rgb(200, 228, 235), #f0f0f0); /* Fondo más suave con tonos frescos */
   background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
   min-height: 100vh;
 }
@@ -25,9 +25,66 @@ a {
   color: white;
   border-radius: 5px;
   text-decoration: none;
+  font-size: 1rem; /* tamaño base */
 }
 
 /* Estilos para los componentes de la aplicación */
 .home, .lecciones, .felicitaciones, .leccion-detalle {
   padding: 20px;
 }
+
+/* --- RESPONSIVE --- */
+/* Para dispositivos móviles pequeños */
+@media (max-width: 480px) {
+  .hero-logo {
+      width: 50%; /* Los logos ocupan el 50% del ancho de la pantalla */
+      max-width: 100px;
+  }
+
+  .title-with-logos {
+      flex-direction: column; /* Los logos y el título se apilan verticalmente */
+      align-items: center;
+  }
+
+  .cta-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+  }
+}
+
+/* Para tablets o pantallas medianas */
+@media (max-width: 768px) {
+  .hero-logo {
+      width: 30%; /* Los logos ocupan el 30% del ancho de la pantalla */
+      max-width: 150px;
+  }
+
+  .title-with-logos {
+      justify-content: space-evenly; /* Los logos se distribuyen uniformemente */
+      flex-direction: row;
+  }
+
+  .cta-btn {
+      font-size: 1.2rem;
+      padding: 12px 25px;
+  }
+}
+
+/* Para pantallas grandes (escritorios y laptops) */
+@media (min-width: 1200px) {
+  .hero-logo {
+      width: 25%; /* Los logos ocupan el 25% del ancho de la pantalla */
+      max-width: 200px;
+  }
+
+  .title-with-logos {
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+
+  .cta-btn {
+      font-size: 1.5rem;
+      padding: 14px 30px;
+  }
+}
+
