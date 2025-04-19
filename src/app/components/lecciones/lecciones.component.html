@@ -1,16 +1,15 @@
 <div class="lecciones">
-    <h2>Lecciones Disponibles</h2>
-    <p>Selecciona una lección para comenzar a aprender el lenguaje de señas.</p>
-    <ul class="lecciones-list">
-      <li *ngFor="let leccion of lecciones" class="leccion-item">
-        <!-- Enlace que redirige al detalle de la lección -->
-        <a [routerLink]="['/leccion', leccion.id]" class="leccion-link">
-          <div class="leccion-card">
-            <h3>{{ leccion.titulo }}</h3>
-            <p>{{ leccion.descripcion | slice:0:100 }}...</p>
-            <span class="view-details">Ver detalles</span>
-          </div>
-        </a>
-      </li>
-    </ul>
+  <h1 class="main-title">Explora Nuestras Lecciones de Lengua de Señas</h1>
+  <p class="intro-text">Selecciona una lección para comenzar tu viaje de aprendizaje en lenguaje de señas. ¡Cada paso cuenta hacia una comunicación inclusiva!</p>
+  
+  <div class="lecciones-grid">
+    <div *ngFor="let leccion of lecciones" class="leccion-card">
+      <a [routerLink]="['/leccion', leccion.id]" class="leccion-link">
+        <img src="pequeño.png" alt="Icono de lección" class="leccion-icon">
+        <h3 class="leccion-title">{{ leccion.titulo }}</h3>
+        <p class="leccion-desc">{{ leccion.descripcion | slice:0:100 }}...</p>
+        <button class="cta-btn">Ver detalles</button>
+      </a>
+    </div>
+  </div>
 </div>

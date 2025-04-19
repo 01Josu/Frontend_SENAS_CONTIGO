@@ -1,44 +1,153 @@
-/* lecciones.component.css */
-.categorias {
+/* Ajustes generales para las lecciones */
+.lecciones {
+  background: linear-gradient(to bottom right, #a8d8d3, #e1e8ee); /* Fondo más suave con tonos frescos */
+  padding: 20px; /* (arriba-abajo 10px, izquierda-derecha 20px) */
+  min-height: 100vh;
+  margin: 0;
+  box-sizing: border-box; /* Esto asegura que el padding no agrande la sección */
+}
+
+/* Contenedor de las tarjetas */
+.lecciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajuste de columnas */
+  gap: 80px; /* Menor espacio entre las tarjetas para que no se vean tan separadas */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Estilo de las tarjetas */
+.leccion-card {
+  background: #ffffff; /* Fondo blanco */
+  border-radius: 18px; /* Bordes redondeados */
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  border: 1px solid #d8e1e4; /* Borde suave */
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between; /* Esto asegura que los elementos dentro del contenedor se distribuyan correctamente */
+  height: 100%;
+  background-color: #f8f9fa; /* Fondo claro */
+  position: relative;
 }
 
-.categoria-item {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  transition: transform 0.3s ease;
+/* Hover en las tarjetas */
+.leccion-card:hover {
+  transform: translateY(-10px); /* Transición de movimiento más sutil */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  background-color: #e8f1f1; /* Fondo más suave al hacer hover */
 }
 
-.categoria-item:hover {
-  transform: scale(1.05);  /* Efecto de ampliación */
-}
-
-h2 {
+/* Título de las lecciones */
+.leccion-title {
+  margin-bottom: 15px;
+  font-size: 1.9rem; /* Título un poco más grande */
+  font-weight: 700;
+  color: #333333; /* Gris oscuro */
   text-align: center;
-  font-size: 2rem;
+  letter-spacing: 0.5px; /* Espaciado de letras */
+  text-transform: capitalize; /* Títulos en minúsculas para dar un toque moderno */
+}
+
+/* Descripción */
+.leccion-desc {
+  flex-grow: 1;
+  font-size: 1.2rem; /* Texto un poco más grande */
+  color: #666666; /* Gris más suave para la descripción */
   margin-bottom: 20px;
+  text-align: center;
 }
 
-h3 {
-  color: #3a3a3a;
-}
-
+/* Botón CTA */
 .cta-btn {
-  background-color: #6D9F9B;
+  align-self: center;
+  background-color: #6D9F9B; /* Verde menta suave */
   color: white;
-  padding: 10px 20px;
+  padding: 12px 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Añadido efecto de sombra */
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase; /* Títulos en mayúsculas para un toque más marcado */
 }
 
+/* Hover en el botón */
 .cta-btn:hover {
-  background-color: #5c8c88;
+  background-color: #5c8c88; /* Verde más oscuro para hover */
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra en el hover para destacar el botón */
+}
+
+/* Animación suave al cargar las tarjetas */
+.leccion-card {
+  animation: fadeInUp 0.8s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Asegurarse de que el botón esté centrado en la parte inferior */
+.leccion-card .cta-btn {
+  position: absolute; /* Esto lo saca del flujo normal y lo coloca en una posición específica */
+  bottom: 20px; /* Se asegura de que esté alineado en la parte inferior con un pequeño margen */
+  left: 50%; /* Centra el botón horizontalmente */
+  transform: translateX(-50%); /* Ajuste para centrar el botón perfectamente */
+  background-color: #6D9F9B; /* Verde menta suave */
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase; /* Para que el texto sea en mayúsculas */
+}
+
+
+/* Título principal */
+.main-title {
+  font-size: 3.5rem; /* Aumenté el tamaño del título */
+  font-weight: 700; /* Un poco más pesado para destacar */
+  color: #2d3436; /* Gris oscuro para un buen contraste */
+  text-align: center; /* Centrado en la página */
+  text-transform: uppercase; /* En mayúsculas */
+  letter-spacing: 3px; /* Un poco más de espacio entre las letras */
+  margin-top: 0px; /* Separación desde la parte superior */
+  margin-bottom: 10px; /* Separación hacia el párrafo */
+}
+
+/* Descripción debajo del título */
+.intro-text {
+  font-size: 1.3rem; /* Tamaño de fuente más pequeño que el título */
+  color: #636e72; /* Gris suave para que no compita con el título */
+  text-align: center; /* Centrado también */
+  max-width: 800px; /* Limitar el ancho para mejor legibilidad */
+  margin: 0 auto; /* Centrar el texto */
+  padding: 0 20px; /* Algo de relleno a los lados */
+  line-height: 1.8; /* Mejor altura de línea para facilitar la lectura */
+  margin-bottom: 40px; /* Separación hacia el resto de la página */
+}
+
+.leccion-card {
+  position: relative; /* Necesario para que el icono se posicione dentro */
+}
+
+.leccion-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px; /* Tamaño del iconito */
+  height: 40px;
+  object-fit: contain;
 }

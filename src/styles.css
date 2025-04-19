@@ -1,27 +1,33 @@
+/* Fondo general */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1, h2 {
-    text-align: center;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0077cc;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  .home, .lecciones, .felicitaciones, .leccion-detalle {
-    padding: 20px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #a8d8d3, #63c2aa); /* Fondo más suave con tonos frescos */
+  background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
+  min-height: 100vh;
+}
+
+/* Asegurarse que los encabezados estén centrados */
+h1, h2 {
+  text-align: center;
+}
+
+/* Asegurarse que los enlaces no tengan subrayado */
+a {
+  text-decoration: none;
+}
+
+/* Estilo de botones */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Estilos para los componentes de la aplicación */
+.home, .lecciones, .felicitaciones, .leccion-detalle {
+  padding: 20px;
+}
